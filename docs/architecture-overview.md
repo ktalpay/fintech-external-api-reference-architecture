@@ -56,6 +56,14 @@ The main design principle is that the caller does not decide its company scope. 
 - Result polling for asynchronous workflows
 - Safe error responses that do not leak internal details
 
+## Design Assumptions
+
+This architecture assumes a system-to-system integration model where external clients need predictable API access but should not receive broad platform-level permissions.
+
+The design also assumes that company or tenant boundaries must be enforced by the platform, not by trusting request parameters. In practice, this means the API key is treated as both a credential and an ownership signal.
+
+The architecture is intentionally conservative. It prefers explicit ownership resolution, centralized scope enforcement, auditability, and early rate limiting over scattered authorization checks inside individual endpoints.
+
 ## Text-Based Architecture Diagram
 
 ```mermaid
