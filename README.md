@@ -63,16 +63,13 @@ Architecture decision records:
 - [ADR-002: Company-scoped data access](adr/ADR-002-company-scoped-data-access.md)
 - [ADR-003: Audit and rate limiting](adr/ADR-003-audit-and-rate-limiting.md)
 
-## GTV Evidence Use
+## Intended Use
 
-This artifact can support FinTech architecture positioning and may be useful for:
+This repository is intended as a public reference architecture for discussing secure external API design in FinTech-style systems.
 
-- Optional Criterion 1: Innovation
-- Optional Criterion 3: Significant technical contribution
+It can be used as a technical writing artifact, architecture discussion material, or a starting point for reviewing API ownership, company-scoped access, audit logging, rate limiting, and token lifecycle decisions.
 
-This is an evidence candidate, not complete evidence by itself. It should be supported with recommendation letters, screenshots, measurable outcomes, public posts, employer-safe evidence, or other artifacts that validate the underlying professional experience.
-
-It should be described as a public-safe reference architecture, not as production code or a direct copy of any private implementation.
+It should not be treated as production code, a complete implementation, or proof of commercial impact.
 
 ## Status
 
