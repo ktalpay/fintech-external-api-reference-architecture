@@ -50,7 +50,7 @@ The repository is not intended to present a full product or implementation. It i
 
 Core documents:
 
-- [Evidence purpose](evidence-purpose.md)
+- [Artifact purpose](artifact-purpose.md)
 - [Architecture overview](docs/architecture-overview.md)
 - [API key authentication](docs/api-key-authentication.md)
 - [Company-scoped access](docs/company-scoped-access.md)
