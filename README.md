@@ -68,4 +68,4 @@ It should be described as a public-safe reference architecture, not as productio
 
 ## Status
 
-Draft public reference architecture artifact.
+Public reference architecture artifact under active review.

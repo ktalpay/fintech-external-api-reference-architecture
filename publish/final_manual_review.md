@@ -32,10 +32,10 @@ Use one:
 
 Decision:
 
-`TBD`
+`Approved after minor fixes`
 
 Reviewer notes:
 
 ```text
-
+Repository was published as a public-safe reference architecture artifact after automated QA and manual review. Remaining actions are GitHub topics, screenshot capture, Mermaid visual confirmation, and LinkedIn evidence linkage.
 ```
