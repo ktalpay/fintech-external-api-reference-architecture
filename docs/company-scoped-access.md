@@ -74,3 +74,11 @@ Recommended controls:
 - Expired tokens cannot access company data.
 - Audit logs include resolved company scope.
 - Error responses do not reveal other company identifiers.
+
+## Architectural Note
+
+The most important design choice in this document is not the use of an API key itself. The important part is what the API key resolves to.
+
+If the token only answers “is this caller authenticated?”, the API still needs a separate and reliable authorization boundary. In this model, the token resolves to an owning company, and that company becomes the default scope for all downstream commands and queries.
+
+This reduces the risk of cross-company access caused by trusting request parameters, route values, or client-side assumptions.
