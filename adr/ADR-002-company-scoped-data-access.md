@@ -28,3 +28,5 @@ For example, if a token belongs to `CompanyId 12`, a request for a bank list ret
 - Per-company API base URLs: possible, but operationally heavier and still requires backend authorization.
 - User-based authentication only: useful for user workflows, but not sufficient for system-to-system external integrations.
 - Endpoint-specific company filters: rejected as the primary model because scattered filtering is easy to miss.
+
+This decision intentionally puts company-scope resolution close to authentication rather than leaving it to individual endpoints. The trade-off is that application services must consistently carry scope context, but the benefit is a clearer and more testable authorization boundary.
