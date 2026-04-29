@@ -6,6 +6,14 @@ This repository documents a public-safe reference architecture for secure extern
 
 The goal is to show architecture reasoning for external integrations where security, company-scoped access, auditability, and operational controls are first-class design concerns.
 
+## Why I Wrote This
+
+External integration APIs often look simple at the endpoint level, but most of the risk sits behind the endpoint: ownership resolution, tenant isolation, auditability, token lifecycle, and operational failure handling.
+
+I wrote this reference architecture to document the design decisions I consider important when exposing FinTech-style APIs to external systems. The focus is intentionally narrow: API key ownership, company-scoped access, audit logging, rate limiting, and safe operational boundaries.
+
+The repository is not intended to present a full product or implementation. It is a public architecture note showing how I reason about secure integration boundaries in regulated or operationally sensitive software systems.
+
 ## Architecture Themes
 
 - Payment automation

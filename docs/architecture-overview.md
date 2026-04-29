@@ -12,6 +12,14 @@ The architecture uses an API gateway or public API layer, API key resolution, co
 
 The main design principle is that the caller does not decide its company scope. The platform resolves the API key to an owning company and applies that scope to all downstream reads and commands.
 
+## Design Assumptions
+
+This architecture assumes a system-to-system integration model where external clients need predictable API access but should not receive broad platform-level permissions.
+
+The design also assumes that company or tenant boundaries must be enforced by the platform, not by trusting request parameters. In practice, this means the API key is treated as both a credential and an ownership signal.
+
+The architecture is intentionally conservative. It prefers explicit ownership resolution, centralized scope enforcement, auditability, and early rate limiting over scattered authorization checks inside individual endpoints.
+
 ## Main Components
 
 - External Client: Third-party or partner system calling the public API.

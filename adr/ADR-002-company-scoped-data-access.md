@@ -22,6 +22,8 @@ For example, if a token belongs to `CompanyId 12`, a request for a bank list ret
 - Tests must verify that cross-company access is rejected.
 - Background processing must preserve company context.
 
+This decision intentionally puts company-scope resolution close to authentication rather than leaving it to individual endpoints. The trade-off is that application services must consistently carry scope context, but the benefit is a clearer and more testable authorization boundary.
+
 ## Alternatives Considered
 
 - Trusting `CompanyId` from request parameters: rejected because it creates cross-company access risk.

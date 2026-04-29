@@ -4,6 +4,14 @@
 
 Each API key belongs to a single company or tenant. The API key is not only a secret; it is an ownership boundary. When a request arrives, the platform resolves the token to its owning company and uses that company as the authorization scope.
 
+## Architectural Note
+
+The most important design choice in this document is not the use of an API key itself. The important part is what the API key resolves to.
+
+If the token only answers "is this caller authenticated?", the API still needs a separate and reliable authorization boundary. In this model, the token resolves to an owning company, and that company becomes the default scope for all downstream commands and queries.
+
+This reduces the risk of cross-company access caused by trusting request parameters, route values, or client-side assumptions.
+
 ## Resolving CompanyId from API Key
 
 When a request arrives with `X-Api-Key`, the API resolves the token to its owning `CompanyId` and scopes all returned data to that company.
