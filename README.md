@@ -69,3 +69,11 @@ It should be described as a public-safe reference architecture, not as productio
 ## Status
 
 Public reference architecture artifact under active review.
+
+## Why I Wrote This
+
+External integration APIs often look simple at the endpoint level, but most of the risk sits behind the endpoint: ownership resolution, tenant isolation, auditability, token lifecycle, and operational failure handling.
+
+I wrote this reference architecture to document the design decisions I consider important when exposing FinTech-style APIs to external systems. The focus is intentionally narrow: API key ownership, company-scoped access, audit logging, rate limiting, and safe operational boundaries.
+
+The repository is not intended to present a full product or implementation. It is a public architecture note showing how I reason about secure integration boundaries in regulated or operationally sensitive software systems.
